@@ -5,6 +5,7 @@ public class Movimientos_Jugador : MonoBehaviour
     [Header ("Variables de movilidad")]
 
     [SerializeField] private float VelocidadMovimiento;
+    [SerializeField] private float MaxSalto;
 
     [Header("Layers")]
     [SerializeField] private LayerMask SuperficieLayer;
@@ -39,7 +40,7 @@ public class Movimientos_Jugador : MonoBehaviour
             Cuerpo.velocity = new Vector2(0.0f, Cuerpo.velocity.y);
         }
 
-        if (ValorSalto >= 20f && EnSuelo())
+        if (ValorSalto >= MaxSalto && EnSuelo())
         {
             TiempoX = MovimientosJugador * VelocidadMovimiento;
             TiempoY = ValorSalto;
