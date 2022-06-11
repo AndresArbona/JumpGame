@@ -9,7 +9,7 @@ public class MenuPrincipal : MonoBehaviour
     {
 
         SceneManager.LoadScene("Level");
-
+        Time.timeScale = 1f;
     }
     public void EscenaOpciones()
     {
